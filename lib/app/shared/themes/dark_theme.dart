@@ -8,7 +8,51 @@ final class DarkTheme {
         textTheme: _textTheme(),
         textButtonTheme: _textButton(),
         elevatedButtonTheme: _elevatedButton(),
+        iconTheme: _iconTheme(),
+        inputDecorationTheme: _inputDecoration(),
       );
+
+  InputDecorationTheme _inputDecoration() {
+    return InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderSide: BorderSide(
+          width: 0.1,
+          color: AppColors.darkBackground.withOpacity(0.5),
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          width: 0.1,
+          color: AppColors.lightBackground.withOpacity(0.5),
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          width: 0.1,
+          color: AppColors.lightBackground.withOpacity(1),
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      hintStyle: TextStyle(
+        color: AppColors.lightBackground,
+        fontWeight: FontWeight.w300,
+        fontSize: 14,
+      ),
+      suffixIconColor: AppColors.lightBackground,
+      filled: true,
+      fillColor: AppColors.grey.withOpacity(0.1),
+      contentPadding: const EdgeInsets.all(15),
+    );
+  }
+
+  IconThemeData _iconTheme() {
+    return IconThemeData(
+      color: AppColors.lightBackground,
+      size: 38,
+    );
+  }
 
   ElevatedButtonThemeData _elevatedButton() {
     return ElevatedButtonThemeData(
@@ -36,6 +80,11 @@ final class DarkTheme {
 
   TextTheme _textTheme() {
     return TextTheme(
+      headlineSmall: TextStyle(
+        color: AppColors.lightBackground,
+        fontWeight: FontWeight.w600,
+        fontSize: 18,
+      ),
       bodyLarge: TextStyle(
         color: AppColors.lightBackground,
         fontWeight: FontWeight.w500,
