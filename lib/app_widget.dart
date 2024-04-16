@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app/presentations/pages/welcome/welcome_page.dart';
+import 'app/routes/routes.dart';
 import 'app/shared/themes/dark_theme.dart';
 import 'app/shared/themes/ligth_theme.dart';
 
@@ -9,11 +9,11 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: LightTheme().theme,
       darkTheme: DarkTheme().themeData,
-      home: const WelcomePage(),
+      routerConfig: Routes.routes,
     );
   }
 }
