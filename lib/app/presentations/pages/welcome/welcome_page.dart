@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../shared/app_svg.dart';
-import '../../../shared/extensions/context_extentions.dart';
+import '../../../shared/extensions/context_extensions.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
