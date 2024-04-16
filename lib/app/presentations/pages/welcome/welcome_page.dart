@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../shared/app_svg.dart';
 import '../../../shared/extensions/context_extensions.dart';
@@ -49,7 +50,9 @@ class WelcomePage extends StatelessWidget {
                   'BUSCA RÁPIDA',
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed('search-packages');
+                },
               ),
             ),
           ],
